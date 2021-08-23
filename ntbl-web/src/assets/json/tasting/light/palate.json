@@ -1,0 +1,29 @@
+[
+	{
+		"isMultiple": false,
+		"keys": [
+			"sweetness_",
+			"acidity_",
+			"tannin_",
+			"alcohol_",
+			"body_",
+			"mousse_",
+			"flavourintensity_",
+			"finish_"
+		],
+		"required": [
+			"sweetness_",
+			"acidity_",
+			"tannin_",
+			"alcohol_",
+			"body_",
+			"mousse_",
+			"flavourintensity_",
+			"finish_"
+		]
+	},
+	{
+		"isMultiple": true,
+		"keys": ["notes_"]
+	}
+]

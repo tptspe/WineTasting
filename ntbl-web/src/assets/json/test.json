@@ -1,0 +1,14 @@
+{
+	"winetype_": {
+		"selectionName": "FRUIT",
+		"options": ["Still", "Sparkling", "Fortified"]
+	},
+	"color_": {
+		"selectionName": "VEGIES",
+		"options": ["White", "Rose", "Red"]
+	},
+	"nuance_": {
+		"selectionName": "NUTS",
+		"options": ["Lemon green", "Lemon", "Gold", "Amber", "Brown"]
+	}
+}

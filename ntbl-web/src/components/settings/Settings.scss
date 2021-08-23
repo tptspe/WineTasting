@@ -1,0 +1,122 @@
+@import 'src/assets/scss/partials/_vars';
+
+.settings-page {
+	position: relative;
+
+	.logged-in-user-info {
+		position: absolute;
+		top: 5px;
+		right: 5%;
+		width: auto;
+		height: 45px;
+		line-height: 45px;
+
+		.ugravatar {
+			display: inline-block;
+			margin-right: 7px;
+			width: 35px;
+			height: 35px;
+
+			img {
+				max-width: 100%;
+			}
+		}
+
+		.uemail {
+			color: $cp_primary;
+		}
+	}
+
+	.advance-section-wrapper {
+		/*	position: absolute;
+			top: 5px;
+			right: 5%;
+			width:auto;
+		*/
+		/*margin: auto;
+			width: 190px;*/
+
+		button {
+			padding-left: 3rem;
+		}
+
+		.advance-icon {
+			position: absolute;
+			font-size: 17px;
+			top: 29.5%;
+			left: 15%;
+		}
+	}
+
+	.hidden {
+		display: none !important;
+	}
+
+	.page-header {
+		margin-bottom: 50px;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	.collapse-header:hover {
+		cursor: pointer;
+	}
+
+	.collapse-trigger {
+		float: right;
+		font-size: 32px;
+		margin: 0 20px;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	.advance-option-wrapper {
+		text-align: center;
+		min-height: 350px;
+		background: $cp_grey_light;
+		border: 1px solid $c_border;
+		padding: 20px;
+		max-width: 550px;
+	}
+
+	.the-option {
+		max-width: 100%;
+		text-align: left;
+		margin: 0 auto;
+
+		.label {
+			font-weight: bold;
+			margin-right: 10px;
+		}
+
+		.val {
+			font-style: italic;
+			color: green;
+			margin-right: 10px;
+		}
+
+		.btn {
+			padding: 10px 15px;
+		}
+	}
+
+	.fa-spin {
+		font-size: 35px;
+	}
+
+	.loading-wrapper {
+		text-align: center;
+	}
+
+	.loading-text {
+		margin-bottom: 10px;
+	}
+
+	.row.is-logged-in {
+		text-align: center;
+	}
+}

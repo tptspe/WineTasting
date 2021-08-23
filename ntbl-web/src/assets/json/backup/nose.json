@@ -1,0 +1,203 @@
+{
+	"step1": {
+		"isMultiple": false,
+		"data": {
+			"condition_": {
+				"selectionName": "Condition",
+				"options": ["condition_clean", "condition_unclean"]
+			},
+			"noseintensity_": {
+				"selectionName": "Intensity",
+				"options": [
+					"noseintensity_light",
+					"noseintensity_medium_minus",
+					"noseintensity_medium",
+					"noseintensity_medium_plus",
+					"noseintensity_pronounced"
+				]
+			},
+			"development_": {
+				"selectionName": "Development",
+				"options": [
+					"development_youthful",
+					"development_developing",
+					"development_fully_developed",
+					"development_tired"
+				]
+			}
+		}
+	},
+	"step2": {
+		"isMultiple": true,
+		"data": {
+			"floral_": {
+				"selectionName": "Floral",
+				"options": [
+					"floral_acacia",
+					"floral_honeysuckle",
+					"floral_chamomile",
+					"floral_elderflower",
+					"floral_geranium",
+					"floral_blossom",
+					"floral_rose",
+					"floral_violet"
+				]
+			},
+			"green_fruit_": {
+				"selectionName": "Green Fruit",
+				"options": [
+					"green_fruit_apple",
+					"green_fruit_gooseberry",
+					"green_fruit_pear",
+					"green_fruit_pear_drop",
+					"green_fruit_quince",
+					"green_fruit_grape"
+				]
+			},
+			"citrus_fruit_": {
+				"selectionName": "Citrus Fruit",
+				"options": [
+					"citrus_fruit_grapefruit",
+					"citrus_fruit_lemon",
+					"citrus_fruit_lime",
+					"citrus_fruit_orange_peel",
+					"citrus_fruit_lemon_peel"
+				]
+			},
+			"stone_fruit_": {
+				"selectionName": "Stone Fruit",
+				"options": ["stone_fruit_peach", "stone_fruit_apricot", "stone_fruit_nectarine"]
+			},
+			"tropical_": {
+				"selectionName": "Tropical Fruit",
+				"options": [
+					"tropical_banana",
+					"tropical_lychee",
+					"tropical_mango",
+					"tropical_melon",
+					"tropical_passion_fruit",
+					"tropical_pineapple"
+				]
+			},
+			"red_fruit_": {
+				"selectionName": "Red Fruit",
+				"options": [
+					"red_fruit_redcurrant",
+					"red_fruit_cranberry",
+					"red_fruit_raspberry",
+					"red_fruit_strawberry",
+					"red_fruit_red_cherry",
+					"red_fruit_red_plum"
+				]
+			},
+			"black_fruit_": {
+				"selectionName": "Black Fruit",
+				"options": [
+					"black_fruit_blackcurrant",
+					"black_fruit_blackberry",
+					"black_fruit_bramble",
+					"black_fruit_blueberry",
+					"black_fruit_black_cherry",
+					"black_fruit_black_plum"
+				]
+			},
+			"dried_fruit_": {
+				"selectionName": "Dried Fruit",
+				"options": [
+					"dried_fruit_fig",
+					"dried_fruit_prune",
+					"dried_fruit_raisin",
+					"dried_fruit_sultana",
+					"dried_fruit_kirsch",
+					"dried_fruit_jamminess"
+				]
+			},
+			"cooked_fruit_": {
+				"selectionName": "Cooked Fruit",
+				"options": [
+					"cooked_fruit_baked_fruits",
+					"cooked_fruit_stewed_fruits",
+					"cooked_fruit_preserved_fruits"
+				]
+			}
+		}
+	},
+	"step3": {
+		"isMultiple": true,
+		"data": {
+			"herbaceous_": {
+				"selectionName": "Herbaceous",
+				"options": [
+					"herbaceous_green_bell_pepper",
+					"herbaceous_grass",
+					"herbaceous_tomato_leaf",
+					"herbaceous_asparagus",
+					"herbaceous_blackcurrant_leaf"
+				]
+			},
+			"herbal_": {
+				"selectionName": "Herbal",
+				"options": [
+					"herbal_eucalyptus",
+					"herbal_mint",
+					"herbal_medicinal",
+					"herbal_lavender",
+					"herbal_fennel",
+					"herbal_dill"
+				]
+			},
+			"pungent_spice_": {
+				"selectionName": "Pungent Spice",
+				"options": [
+					"pungent_spice_black_pepper",
+					"pungent_spice_white_pepper",
+					"pungent_spice_liquorice",
+					"pungent_spice_juniper",
+					"pungent_spice_ginger"
+				]
+			},
+			"other_": {
+				"selectionName": "Other",
+				"options": ["other_flint", "other_wet_stones", "other_wet_wool"]
+			}
+		}
+	},
+	"step4": {
+		"isMultiple": true,
+		"data": {
+			"yeast_": {
+				"selectionName": "Yeast",
+				"options": [
+					"yeast_biscuit",
+					"yeast_bread",
+					"yeast_toast",
+					"yeast_pastry",
+					"yeast_brioche",
+					"yeast_bread_dough",
+					"yeast_cheese"
+				]
+			},
+			"mlf_": {
+				"selectionName": "MLF",
+				"options": ["mlf_butter", "mlf_cheese", "mlf_cream"]
+			},
+			"oak_": {
+				"selectionName": "Oak",
+				"options": [
+					"oak_vanilla",
+					"oak_cloves",
+					"oak_nutmeg",
+					"oak_coconut",
+					"oak_butterscotch",
+					"oak_toast",
+					"oak_cedar",
+					"oak_charred_wood",
+					"oak_smoke",
+					"oak_chocolate",
+					"oak_coffee",
+					"oak_resinous"
+				]
+			}
+		}
+	}
+}

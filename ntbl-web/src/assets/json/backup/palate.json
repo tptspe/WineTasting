@@ -1,0 +1,39 @@
+{
+	"step1": {
+		"isMultiple": true,
+		"data": {
+			"sweetness_": {
+				"selectionName": "Sweetness",
+				"options": ["Dry", "Off dry", "Medium dry", "Medium sweet", "Sweet", "Luscious"]
+			},
+			"acidity_": {
+				"selectionName": "Acidity",
+				"options": ["Low", "Medium minus", "Medium", "Medium plus", "High"]
+			},
+			"tannin_": {
+				"selectionName": "Tannin",
+				"options": ["None", "Low", "Medium minus", "Medium", "Medium plus"]
+			},
+			"alcohol_": {
+				"selectionName": "Alcohol",
+				"options": ["High", "Medium", "Low"]
+			},
+			"body_": {
+				"selectionName": "Body",
+				"options": ["Full", "Medium plus", "Medium", "Medium minus", "Light"]
+			},
+			"mousse_": {
+				"selectionName": "Mousse",
+				"options": ["None", "Delicate", "Creamy", "Aggressive"]
+			},
+			"flavourintensity_": {
+				"selectionName": "Flavour Intensity",
+				"options": ["Light", "Medium minus", "Medium", "Medium plus", "Pronounced"]
+			},
+			"finish_": {
+				"selectionName": "Finish",
+				"options": ["Short", "Medium minus", "Medium", "Medium plus", "Long"]
+			}
+		}
+	}
+}

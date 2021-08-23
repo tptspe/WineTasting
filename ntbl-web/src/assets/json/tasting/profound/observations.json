@@ -1,0 +1,4 @@
+{
+	"keys": ["quality_", "readiness_"],
+	"required": ["quality_", "readiness_"]
+}

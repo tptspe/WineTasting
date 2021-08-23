@@ -1,0 +1,272 @@
+{
+	"winetype_": ["winetype_still", "winetype_sparkling", "winetype_fortified"],
+	"clarity_": ["clarity_clear", "clarity_hazy"],
+	"appearanceintensity_": [
+		"appearanceintensity_pale",
+		"appearanceintensity_medium",
+		"appearanceintensity_deep"
+	],
+	"color_": ["color_white_", "color_rose_", "color_red_"],
+	"color_white_": [
+		"color_white_lemon_green",
+		"color_white_lemon",
+		"color_white_gold",
+		"color_white_amber",
+		"color_white_brown"
+	],
+	"color_rose_": [
+		"color_rose_pink",
+		"color_rose_salmon",
+		"color_rose_orange",
+		"color_rose_onion_skin"
+	],
+	"color_red_": [
+		"color_red_purple",
+		"color_red_ruby",
+		"color_red_garnet",
+		"color_red_tawny",
+		"color_red_brown"
+	],
+	"condition_": ["condition_clean", "condition_unclean"],
+	"noseintensity_": [
+		"noseintensity_light",
+		"noseintensity_medium_m",
+		"noseintensity_medium",
+		"noseintensity_medium_p",
+		"noseintensity_pronounced"
+	],
+	"development_": [
+		"development_youthful",
+		"development_developing",
+		"development_fully_developed",
+		"development_tired"
+	],
+	"sweetness_": [
+		"sweetness_dry",
+		"sweetness_off_dry",
+		"sweetness_medium_dry",
+		"sweetness_medium_sweet",
+		"sweetness_sweet",
+		"sweetness_luscious"
+	],
+	"acidity_": [
+		"acidity_low",
+		"acidity_medium_m",
+		"acidity_medium",
+		"acidity_medium_p",
+		"acidity_high"
+	],
+	"tannin_": [
+		"tannin_none",
+		"tannin_low",
+		"tannin_medium_m",
+		"tannin_medium",
+		"tannin_medium_p",
+		"tannin_high"
+	],
+	"alcohol_": ["alcohol_high", "alcohol_medium", "alcohol_low"],
+	"body_": ["body_full", "body_medium_p", "body_medium", "body_medium_m", "body_light"],
+	"mousse_": ["mousse_none", "mousse_delicate", "mousse_creamy", "mousse_aggressive"],
+	"flavourintensity_": [
+		"flavourintensity_light",
+		"flavourintensity_medium_m",
+		"flavourintensity_medium",
+		"flavourintensity_medium_p",
+		"flavourintensity_pronounced"
+	],
+	"finish_": ["finish_short", "finish_medium_m", "finish_medium", "finish_medium_p", "finish_long"],
+	"quality_": [
+		"quality_outstanding",
+		"quality_very_good",
+		"quality_good",
+		"quality_acceptable",
+		"quality_poor",
+		"quality_faulty"
+	],
+	"readiness_": [
+		"readiness_too_young",
+		"readiness_potential_for_ageing",
+		"readiness_not_suitable_for_ageing",
+		"readiness_too_old"
+	],
+	"rating_balance_": ["rating_balance_min", "rating_balance_max"],
+	"rating_length_": ["rating_length_min", "rating_length_max"],
+	"rating_intensity_": ["rating_intensity_min", "rating_intensity_max"],
+	"rating_senseofplace_": ["rating_senseofplace_min", "rating_senseofplace_max"],
+	"rating_complexity_": ["rating_complexity_min", "rating_complexity_max"],
+	"rating_quality_": ["rating_quality_min", "rating_quality_max"],
+	"rating_drinkability_": ["rating_drinkability_min", "rating_drinkability_max"],
+	"floral_": [
+		"note_acacia",
+		"note_honeysuckle",
+		"note_chamomile",
+		"note_elderflower",
+		"note_geranium",
+		"note_blossom",
+		"note_rose",
+		"note_violet"
+	],
+	"green_fruit_": [
+		"note_apple",
+		"note_gooseberry",
+		"note_pear",
+		"note_pear_drop",
+		"note_quince",
+		"note_grape"
+	],
+	"citrus_fruit_": [
+		"note_grapefruit",
+		"note_lemon",
+		"note_lime",
+		"note_orange_peel",
+		"note_lemon_peel"
+	],
+	"stone_fruit_": ["note_peach", "note_apricot", "note_nectarine"],
+	"tropical_": [
+		"note_banana",
+		"note_lychee",
+		"note_mango",
+		"note_melon",
+		"note_passion_fruit",
+		"note_pineapple"
+	],
+	"red_fruit_": [
+		"note_redcurrant",
+		"note_cranberry",
+		"note_raspberry",
+		"note_strawberry",
+		"note_red_cherry",
+		"note_red_plum"
+	],
+	"black_fruit_": [
+		"note_blackcurrant",
+		"note_blackberry",
+		"note_bramble",
+		"note_blueberry",
+		"note_black_cherry",
+		"note_black_plum"
+	],
+	"dried_fruit_": [
+		"note_fig",
+		"note_prune",
+		"note_raisin",
+		"note_sultana",
+		"note_kirsch",
+		"note_jamminess"
+	],
+	"cooked_fruit_": ["note_baked_fruits", "note_stewed_fruits", "note_preserved_fruits"],
+	"herbaceous_": [
+		"note_green_bell_pepper",
+		"note_grass",
+		"note_tomato_leaf",
+		"note_asparagus",
+		"note_blackcurrant_leaf"
+	],
+	"herbal_": [
+		"note_eucalyptus",
+		"note_mint",
+		"note_medicinal",
+		"note_lavender",
+		"note_fennel",
+		"note_dill"
+	],
+	"pungent_spice_": [
+		"note_black_pepper",
+		"note_white_pepper",
+		"note_liquorice",
+		"note_juniper",
+		"note_ginger"
+	],
+	"other_": ["note_flint", "note_wet_stones", "note_wet_wool"],
+	"yeast_": [
+		"note_biscuit",
+		"note_bread",
+		"note_toast",
+		"note_pastry",
+		"note_brioche",
+		"note_bread_dough",
+		"note_cheese"
+	],
+	"mlf_": ["note_butter", "note_cheese", "note_cream"],
+	"oak_": [
+		"note_vanilla",
+		"note_cloves",
+		"note_nutmeg",
+		"note_coconut",
+		"note_butterscotch",
+		"note_toast",
+		"note_cedar",
+		"note_charred_wood",
+		"note_smoke",
+		"note_chocolate",
+		"note_coffee",
+		"note_resinous"
+	],
+	"deliberate_oxidation_": [
+		"note_almond",
+		"note_marzipan",
+		"note_hazelnut",
+		"note_walnut",
+		"note_toffee",
+		"note_caramel"
+	],
+	"fruit_development_white_": [
+		"note_dried_apricot",
+		"note_marmalade",
+		"note_dried_apple",
+		"note_dried_banana"
+	],
+	"fruit_development_red_": [
+		"note_tar",
+		"note_dried_blackberry",
+		"note_dried_cranberry",
+		"note_cooked_blackberry",
+		"note_cooked_red_plum"
+	],
+	"bottle_age_white_": [
+		"note_petrol",
+		"note_kerosene",
+		"note_cinnamon",
+		"note_nutty",
+		"note_cereal",
+		"note_mushroom",
+		"note_hay",
+		"note_honey"
+	],
+	"bottle_age_red_": [
+		"note_leather",
+		"note_forest_floor",
+		"note_earth",
+		"note_game",
+		"note_tobacco",
+		"note_vegetal",
+		"note_wet_leaves",
+		"note_savoury",
+		"note_meaty",
+		"note_farmyard"
+	],
+	"rating_": [
+		"rating_balance_",
+		"rating_length_",
+		"rating_intensity_",
+		"rating_complexity_",
+		"rating_senseofplace_",
+		"rating_quality_",
+		"rating_drinkability_"
+	],
+	"comments_": ["wine_summary", "wine_personal"],
+	"info_": [
+		"tasting_country",
+		"tasting_producer",
+		"tasting_region",
+		"tasting_name",
+		"tasting_vintage",
+		"tasting_grape",
+		"tasting_price",
+		"tasting_currency"
+	],
+	"origin_": ["ui_eu", "ui_sa", "ui_au"],
+	"ui_eu": ["Italy", "Denmark", "France", "Greece", "Armenia"],
+	"ui_au": ["Melbourne", "Sydney"],
+	"ui_au": ["Brazil", "Spain"]
+}

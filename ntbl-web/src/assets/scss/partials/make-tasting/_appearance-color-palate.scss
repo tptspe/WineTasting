@@ -1,0 +1,79 @@
+@import '../_vars';
+@import '../_mixins';
+
+$colours: 'color_white_' $cp_color_white, 'color_rose_' $cp_color_rose, 'color_red_' $cp_color_red;
+
+$clarity_list: 'color_white_lemon_green' $cp_lemon_green darken($cp_lemon_green, 20),
+	'color_white_lemon' $cp_lemon darken($cp_lemon, 20),
+	'color_white_gold' $cp_gold darken($cp_gold, 20),
+	'color_white_amber' $cp_amber darken($cp_amber, 20),
+	'color_white_brown' $cp_brown_w darken($cp_brown_w, 20),
+	'color_rose_pink' $cp_pink darken($cp_pink, 20),
+	'color_rose_salmon' $cp_salmon darken($cp_salmon, 20),
+	'color_rose_orange' $cp_orange darken($cp_orange, 20),
+	'color_rose_onion_skin' $cp_onion_skin darken($cp_onion_skin, 20),
+	'color_red_purple' $cp_purple darken($cp_purple, 20),
+	'color_red_ruby' $cp_ruby darken($cp_ruby, 20),
+	'color_red_garnet' $cp_garnet darken($cp_garnet, 20),
+	'color_red_tawny' $cp_tawny darken($cp_tawny, 20),
+	'color_red_brown' $cp_brown_r darken($cp_brown_r, 20);
+
+.box-selection-option {
+	.option-color-pallette {
+		&.winetype_still,
+		&.winetype_sparkling,
+		&.winetype_fortified {
+			background: $cp_wine_type;
+		}
+
+		@each $i in $colours {
+			&.#{nth($i, 1)} {
+				background: nth($i, 2);
+			}
+		}
+
+		@each $i in $clarity_list {
+			$c1: nth($i, 2);
+			$c2: darken(nth($i, 2), 15);
+			$c3: darken(nth($i, 2), 25);
+			$c1_pale: desaturate($c1, 40%);
+			$c1_medium: desaturate($c1, 10%);
+			$c1_deep: saturate($c1, 20%);
+			$c3_pale: darken($c1_pale, 25%);
+			$c3_medium: darken($c1_medium, 25%);
+			$c3_deep: darken($c1_deep, 25%);
+
+			&.#{nth($i, 1)} {
+				background: nth($i, 2);
+			}
+
+			&.clarity_hazy.#{nth($i, 1)} {
+				@include radial_gradient($c1, $c3) &.appearanceintensity_deep {
+					@include radial_gradient($c1_deep, $c3_deep);
+				}
+
+				&.appearanceintensity_medium {
+					@include radial_gradient($c1_medium, $c3_medium);
+				}
+
+				&.appearanceintensity_pale {
+					@include radial_gradient($c1_pale, $c3_pale);
+				}
+			}
+
+			&.#{nth($i, 1)}.clarity_clear {
+				&.appearanceintensity_deep {
+					background: $c1_deep;
+				}
+
+				&.appearanceintensity_medium {
+					background: $c1_medium;
+				}
+
+				&.appearanceintensity_pale {
+					background: $c1_pale;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,242 @@
+@import 'src/assets/scss/partials/_vars';
+@import 'src/assets/scss/partials/_mixins';
+
+/* Multi step form */
+.mulit-step-form-wrapper {
+	padding: 90px 10px 70px;
+
+	&.nectar {
+		ol.progtrckr {
+			padding: 0 35.3%;
+
+			li {
+				width: 50%;
+			}
+		}
+	}
+
+	ol.progtrckr {
+		background: #f0f0f0;
+		padding-bottom: 0px;
+	}
+
+	.scroll-end-point {
+		position: relative;
+		left: 0;
+		bottom: 0;
+		visibility: hidden;
+	}
+
+	.alert {
+		text-align: center;
+		font-size: 24px;
+	}
+}
+
+.step-title {
+	margin: 25px 0 35px 0;
+	text-transform: capitalize;
+}
+
+.step-container {
+	min-height: 570px;
+}
+
+.multi-step-form-nav {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 70px;
+	border-top: 1px solid #aaa;
+	background: #eee;
+	padding-left: 25px;
+	padding: 15px;
+	z-index: 100;
+	text-align: center;
+
+	button {
+		padding: 8px 20px;
+		background-color: $cp_primary;
+		color: $c_text_lightest;
+		border: 1px solid $cp_primary;
+		@include border_radius(3px);
+		text-decoration: none;
+		margin-left: 10px;
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		&.disabled {
+			opacity: 0.5;
+		}
+	}
+
+	.prev-btn {
+		background-color: transparent;
+		color: $cp_primary;
+		float: left;
+
+		&:hover {
+			background-color: $cp_primary;
+			color: $c_text_lightest;
+		}
+
+		.prev-icon {
+			position: relative;
+			top: -2px;
+			right: 5px;
+			font-size: 18px;
+		}
+	}
+
+	.next-btn {
+		float: right;
+
+		&:hover {
+			border-bottom: 3px solid $c_border_dark;
+		}
+
+		.next-icon {
+			position: relative;
+			top: -2px;
+			left: 5px;
+			font-size: 18px;
+		}
+	}
+
+	.save-btn {
+		float: right;
+	}
+
+	.prev-btn:focus,
+	.next-btn:focus,
+	.save-btn:focus {
+		outline: 0;
+	}
+
+	.copy-btn {
+		&:focus,
+		&.copied {
+			background-color: transparent;
+			color: $cp_primary;
+			outline: 0;
+		}
+	}
+}
+
+/* Progress tracker */
+ol.progtrckr {
+	margin: 0;
+	list-style-type: none;
+	padding-left: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	/*left:10%;*/
+	/*margin-left: -5%;*/
+	z-index: 10;
+	padding: 0 5% 4.9rem 5%;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ef1f1f+0,ef1f1f+0,f0f0f0+70,f0f0f0+100 */
+	@include linear_gradient($c_body);
+
+	li {
+		display: inline-block;
+		text-align: center;
+		line-height: 4.5rem;
+		/*padding: 0 0.7rem;*/
+		cursor: pointer;
+		width: 14.27%;
+		position: relative;
+		height: 75px;
+
+		&:before {
+			position: absolute;
+			left: 50%;
+			margin-left: -14px;
+			bottom: -12px;
+		}
+
+		&.progtrckr-todo {
+			color: silver;
+			border-bottom: 4px solid silver;
+			line-height: 4.9rem;
+
+			&:before {
+				content: '\2022';
+				color: $cp_grey_dark;
+				background-color: #ccc;
+				width: 1.2em;
+				line-height: 1.2em;
+				@include border_radius(1.2em);
+				margin-top: -4px;
+			}
+
+			&:hover:before {
+				color: $cp_grey_dark;
+			}
+		}
+
+		&.progtrckr-doing {
+			color: black;
+			border-bottom: 4px solid $cp_primary;
+			font-weight: bold;
+			font-size: 1.5rem;
+
+			&:before {
+				content: '\2022';
+				color: white;
+				background-color: $cp_primary;
+				width: 1.2em;
+				line-height: 1.2em;
+				@include border_radius(1.2em);
+				margin-top: -2px;
+				font-size: 1rem;
+			}
+
+			&:hover:before {
+				color: $cp_grey_dark;
+			}
+		}
+
+		&.progtrckr-done {
+			color: black;
+			border-bottom: 4px solid $cp_primary;
+			line-height: 4.9rem;
+
+			&:before {
+				content: '\2713';
+				color: white;
+				background-color: $cp_primary;
+				width: 1.2em;
+				line-height: 1.2em;
+				@include border_radius(1.2em);
+				margin-top: -4px;
+			}
+
+			&:hover:before {
+				color: $cp_grey_dark;
+			}
+		}
+	}
+
+	em {
+		display: none;
+		font-weight: 700;
+		padding-left: 1rem;
+	}
+}
+
+@media (max-width: 650px) {
+	.progtrckr li span {
+		display: none;
+	}
+}
+
+@media (max-width: 650px) {
+	.progtrckr em {
+		display: inline;
+	}
+}

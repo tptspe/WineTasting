@@ -1,0 +1,47 @@
+[
+	{
+		"isMultiple": false,
+		"keys": [
+			"sweetness_",
+			"acidity_",
+			"tannin_",
+			"alcohol_",
+			"body_",
+			"mousse_",
+			"flavourintensity_",
+			"finish_"
+		],
+		"required": [
+			"sweetness_",
+			"acidity_",
+			"tannin_",
+			"alcohol_",
+			"body_",
+			"mousse_",
+			"flavourintensity_",
+			"finish_"
+		]
+	},
+	{
+		"isMultiple": true,
+		"keys": [
+			"floral_",
+			"green_fruit_",
+			"citrus_fruit_",
+			"stone_fruit_",
+			"tropical_",
+			"red_fruit_",
+			"black_fruit_",
+			"dried_fruit_",
+			"cooked_fruit_"
+		]
+	},
+	{
+		"isMultiple": true,
+		"keys": ["herbaceous_", "herbal_", "pungent_spice_", "other_"]
+	},
+	{
+		"isMultiple": true,
+		"keys": ["yeast_", "mlf_", "oak_"]
+	}
+]

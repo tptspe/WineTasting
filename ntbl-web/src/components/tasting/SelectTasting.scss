@@ -1,0 +1,17 @@
+@import 'src/assets/scss/partials/_vars';
+
+.select-tasting-page {
+	text-align: center;
+	background: $cp_grey;
+	padding: 2rem;
+
+	.btn {
+		width: 500px;
+		max-width: 90%;
+		height: 7rem;
+		line-height: 7rem;
+		padding: 0;
+		margin-bottom: 1rem;
+		background: $cp_primary;
+	}
+}

@@ -1,0 +1,31 @@
+{
+	"winetype_": {
+		"showSelection": true,
+		"selectionName": "Wine Type",
+		"options": ["winetype_still", "winetype_sparkling", "winetype_fortified"]
+	},
+	"color_": {
+		"showSelection": true,
+		"selectionName": "Colour",
+		"options": ["color_white_", "color_rose_", "color_red_"]
+	},
+	"nuance_": {
+		"showSelection": false,
+		"selectionName": "Nuance/Tint",
+		"options": []
+	},
+	"clarity_": {
+		"showSelection": false,
+		"selectionName": "Clarity",
+		"options": ["clarity_clear", "clarity_hazy"]
+	},
+	"appearanceintensity_": {
+		"showSelection": false,
+		"selectionName": "Appearance",
+		"options": [
+			"appearanceintensity_deep",
+			"appearanceintensity_medium",
+			"appearanceintensity_pale"
+		]
+	}
+}

@@ -1,0 +1,79 @@
+@import 'src/assets/scss/partials/_vars';
+@import 'src/assets/scss/partials/_mixins';
+
+/* login and registration section */
+.login-wrapper {
+	border-right: 1px solid #ddd;
+	margin-bottom: 50px;
+
+	.inactive {
+		opacity: 0.5;
+	}
+}
+
+.login-wrapper.inactive,
+.registration-wrapper.inactive {
+	opacity: 0.5;
+}
+
+.login-form {
+	padding: 10px 3rem;
+	width: 85%;
+	margin: 0 auto;
+
+	.md-form .prefix ~ input,
+	.md-form .prefix ~ label {
+		margin-left: 0;
+		width: 100%;
+	}
+}
+
+.registration-form {
+	padding: 10px 3rem;
+	width: 85%;
+	margin: 0 auto;
+}
+
+.login-form .h3,
+.registration-form .h3 {
+	margin-bottom: 40px;
+}
+
+.login-form .input-group,
+.registration-form .input-group {
+	margin-bottom: 15px;
+}
+
+.login-form .input-group input,
+.registration-form .input-group input {
+	border: 0;
+	border-bottom: 1px solid $c_border;
+}
+
+.login-btn-wrapper,
+.reg-btn-wrapper {
+	margin-top: 35px;
+	margin-bottom: 10px;
+	text-align: right;
+}
+
+.login-btn-wrapper .btn-rounded,
+.reg-btn-wrapper .btn-rounded {
+	@include border_radius(10em);
+}
+
+/* Forgot password */
+.forgot-password {
+	text-align: center;
+	margin-bottom: 15px;
+
+	.forgot-password-link {
+		button {
+			outline: none;
+			border: none;
+			cursor: pointer;
+			background-color: transparent;
+			color: $c_text_blue;
+		}
+	}
+}

@@ -1,0 +1,112 @@
+@import 'src/assets/scss/partials/_vars';
+
+.wine-details {
+	.all-wines-btn-wrapper {
+		.arrow-icon {
+			position: relative;
+			top: -2px;
+			left: -11px;
+			font-size: 20px;
+		}
+
+		.btn {
+			margin: 0;
+			padding: 0 2.14rem;
+			border-radius: 0.125rem 0.125rem 0 0;
+			line-height: 0.84rem;
+			font-size: 18px;
+			height: 40px;
+			line-height: 40px;
+			background: $cp_primary !important;
+		}
+	}
+
+	hr {
+		margin-bottom: 30px;
+	}
+
+	.selected-wine-card {
+		text-align: center;
+		padding: 30px 20%;
+
+		.featured-image-bg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			overflow: hidden;
+			height: 240px;
+			z-index: 0;
+			opacity: 0.7;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.view {
+			width: 350px;
+			margin: 0 auto;
+		}
+
+		.featured-image {
+			max-width: 100%;
+			padding: 10px;
+			border: 1px solid $c_border;
+			margin: 0 auto 20px;
+		}
+	}
+
+	.card-title {
+		color: #777;
+
+		.wine-name {
+			font-weight: normal;
+			font-size: 2rem;
+			color: $cp_primary;
+		}
+	}
+
+	.wine-info {
+		width: 900px;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+
+	.wine-summary,
+	.personal-summary {
+		margin-bottom: 30px;
+	}
+
+	.wine-attributes-wrapper {
+		.wine-attributes {
+			width: 75%;
+			float: left;
+			text-align: left;
+		}
+
+		.rating-total-wrapper {
+			width: 25%;
+			float: left;
+		}
+	}
+
+	.assessment-sections {
+		.rating-name h4 {
+			font-size: 1rem;
+		}
+
+		.rating-scale {
+			.scale-min,
+			.scale-max {
+				font-size: 0.7rem;
+			}
+
+			.scale > span.selected .dot {
+				height: 16px;
+				width: 16px;
+				border-width: 5px;
+			}
+		}
+	}
+}

@@ -1,0 +1,28 @@
+@import 'src/assets/scss/partials/_mixins';
+@import '../_theme';
+
+.Button__Default {
+	border: none;
+	color: $white;
+	font-family: $body_font_family;
+	font-size: 14px;
+	font-weight: 600;
+	padding: 10px 30px;
+	@include border_radius(20px);
+	background-color: $default_button_primary;
+
+	&:hover {
+		cursor: pointer;
+		background-color: $purple_grape_strong;
+	}
+
+	&:active {
+		transform: translate(1px, 1px);
+	}
+
+	&:disabled {
+		background-color: $default_button_primary_disabled;
+		color: $purple_heather;
+		cursor: not-allowed;
+	}
+}

@@ -1,0 +1,82 @@
+@import 'src/assets/scss/partials/_vars';
+@import 'src/assets/scss/partials/_mixins';
+
+.app-header {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center; /* aligns on vertical for column */
+	align-items: center;
+
+	h4 {
+		text-align: center;
+		color: #ff645a !important;
+	}
+
+	.offline-title {
+		top: 0;
+		padding: 10px;
+		position: fixed;
+		background: $cp_primary;
+		color: white;
+		text-align: center;
+		z-index: 100;
+		border-radius: 0px 0px 5px 5px;
+
+		.btn {
+			background-color: $cp_white !important;
+			color: $cp_primary !important;
+			border: 1px solid $cp_primary;
+			padding: 0.35rem 1.1rem;
+			@include border_radius(5px);
+		}
+	}
+
+	h4 {
+		text-align: center;
+		color: #ff645a !important;
+	}
+	.navbar {
+		z-index: 10;
+		background: #eee;
+		border-bottom: #aaa;
+
+		&.navbar-faded {
+			background: rgba(0, 0, 0, 0);
+			@include b-s-none;
+		}
+
+		.navbar-brand {
+			font-size: 1.75rem;
+			color: $cp_primary !important;
+		}
+
+		.navbar-brand:hover {
+			color: red !important;
+		}
+
+		.navbar-nav .nav-link {
+			padding: 10px 18px !important;
+			background: $cp_primary !important;
+			margin-left: 85px;
+		}
+
+		.logout-btn {
+			background: $cp_primary !important;
+		}
+	}
+
+	.toggle-menu-btn {
+		font-size: 2.3rem;
+		color: $cp_primary !important;
+		line-height: 0;
+		z-index: 15;
+		position: fixed;
+		top: 20px;
+		left: 20px;
+	}
+
+	.toggle-menu-btn:hover {
+		cursor: pointer;
+		color: red !important;
+	}
+}

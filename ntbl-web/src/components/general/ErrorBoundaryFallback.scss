@@ -1,0 +1,36 @@
+@import 'src/assets/scss/partials/_vars';
+@import 'src/assets/scss/partials/_mixins';
+
+.error-boundary-page {
+	text-align: center;
+
+	.content {
+		@include border_radius(5px);
+		background: $cp_grey_light;
+		padding: 30px;
+		position: relative;
+		border: 1px solid $c_border;
+		min-height: 500px;
+
+		p {
+			margin-bottom: 5px;
+		}
+
+		.message {
+			button {
+				outline: none;
+				border: none;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.header-error-boundary {
+		margin-bottom: 35px;
+		font-size: 3em;
+	}
+
+	.home-page-link {
+		color: $cp_primary;
+	}
+}

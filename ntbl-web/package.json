@@ -1,0 +1,107 @@
+{
+	"name": "ntbl-web-app",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"start": " react-scripts start",
+		"serve": "serve -s -l 3000 ./build",
+		"env": "[[ -f .env ]] || cat .env.example >> .env",
+		"test": "yarn test-e2e && yarn test-jest",
+		"test-mocha": "mocha test/*test.js --bail --timeout 30000",
+		"test-e2e": "yarn cypress run --project ./test/e2e/",
+		"test-ci": "run-s env test-format build && yarn test-local",
+		"e2e": "yarn test-e2e --headed ",
+		"test-local": "yarn serve & sleep 1 && yarn test",
+		"test-format": "yarn prettier --list-different || (echo 'Please correct file formatting using `npm run format` and try again.' && exit 1)",
+		"test-jest": "yarn env && react-scripts test --env=jsdom",
+		"build": "yarn env && CI=false react-scripts build && cp src/.htaccess build/ ",
+		"format": "yarn prettier --write",
+		"prettier": "prettier **/*.{json,scss,css,js}",
+		"precommit": "lint-staged",
+		"storybook": "start-storybook -p 6006",
+		"build-storybook": "build-storybook"
+	},
+	"dependencies": {
+		"@bugsnag/js": "^6.0.0",
+		"@bugsnag/plugin-react": "^6.0.0",
+		"@redux-offline/redux-offline": "^2.5.1",
+		"alasql": "^0.4.11",
+		"autosuggest-highlight": "^3.1.1",
+		"await-to-js": "^2.0.1",
+		"axios": "^0.18.0",
+		"babel-plugin-transform-decorators-legacy": "^1.3.5",
+		"babel-plugin-transform-object-rest-spread": "^6.26.0",
+		"classnames": "^2.2.6",
+		"core-js": "^2.6.5",
+		"date-fns": "^1.30.1",
+		"hi-base32": "^0.5.0",
+		"husky": "^1.3.1",
+		"js-sha3": "^0.7.0",
+		"jsonh": "0.0.6",
+		"lint-staged": "^8.1.5",
+		"lodash.debounce": "^4.0.8",
+		"mdbreact": "4.7.0",
+		"node-sass-chokidar": "^1.3.3",
+		"pbkdf2": "^3.0.16",
+		"react": "^16.8.5",
+		"react-autosuggest": "^9.4.2",
+		"react-date-picker": "^7.1.1",
+		"react-dom": "^16.8.5",
+		"react-icons": "^2.2.7",
+		"react-redux": "^5.0.7",
+		"react-router": "^4.2.0",
+		"react-router-dom": "^4.2.2",
+		"react-scripts": "^2.1.8",
+		"react-select": "^2.3.0",
+		"react-textarea-autosize": "^7.0.4",
+		"redux": "^4.0.0",
+		"redux-devtools-extension": "^2.13.2",
+		"redux-logger": "^3.0.6",
+		"redux-persist": "^5.10.0",
+		"redux-promise-middleware": "^5.1.1",
+		"redux-thunk": "^2.3.0",
+		"validator": "^10.11.0"
+	},
+	"devDependencies": {
+		"chai": "^4.1.2",
+		"cypress": "^3.2.0",
+		"hjson": "^3.1.2",
+		"mkdirp": "^0.5.1",
+		"mocha": "^5.2.0",
+		"npm-run-all": "^4.1.5",
+		"prettier": "github:prettier/prettier",
+		"puppeteer": "^1.7.0",
+		"react-testing-library": "^6.1.2",
+		"serve": "^10.1.1",
+		"@storybook/react": "^5.0.10",
+		"@storybook/addon-actions": "^5.0.10",
+		"@storybook/addon-links": "^5.0.10",
+		"@storybook/addons": "^5.0.10",
+		"@babel/core": "^7.4.3",
+		"babel-loader": "^8.0.5"
+	},
+	"prettier": {
+		"useTabs": true,
+		"printWidth": 100,
+		"singleQuote": true,
+		"arrowParens": "always",
+		"bracketSpacing": false,
+		"trailingComma": "es5"
+	},
+	"lint-staged": {
+		"*.{js,ts,css,json,scss}": [
+			"yarn format",
+			"git add"
+		]
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"browserslist": [
+		">0.2%",
+		"not dead",
+		"not ie <= 10"
+	]
+}

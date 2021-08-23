@@ -1,0 +1,154 @@
+{
+	"fruit_development_red_": {
+		"notif": [
+			"color_white_",
+			"color_white_lemon_green",
+			"color_white_lemon",
+			"color_white_gold",
+			"color_white_amber",
+			"color_white_brown"
+		]
+	},
+	"bottle_age_red_": {
+		"notif": [
+			"color_white_",
+			"color_white_lemon_green",
+			"color_white_lemon",
+			"color_white_gold",
+			"color_white_amber",
+			"color_white_brown"
+		]
+	},
+	"fruit_development_white_": {
+		"notif": [
+			"color_red_",
+			"color_red_purple",
+			"color_red_ruby",
+			"color_red_garnet",
+			"color_red_tawny",
+			"color_red_brown"
+		]
+	},
+	"bottle_age_white_": {
+		"notif": [
+			"color_red_",
+			"color_red_purple",
+			"color_red_ruby",
+			"color_red_garnet",
+			"color_red_tawny",
+			"color_red_brown"
+		]
+	},
+	"note_tomato_leaf": {
+		"notif": [
+			"color_white_",
+			"color_white_lemon_green",
+			"color_white_lemon",
+			"color_white_gold",
+			"color_white_amber",
+			"color_white_brown"
+		]
+	},
+
+	"note_blackcurrant_leaf": {
+		"notif": [
+			"color_white_",
+			"color_white_lemon_green",
+			"color_white_lemon",
+			"color_white_gold",
+			"color_white_amber",
+			"color_white_brown"
+		]
+	},
+	"note_liquorice": {
+		"notif": [
+			"color_white_",
+			"color_white_lemon_green",
+			"color_white_lemon",
+			"color_white_gold",
+			"color_white_amber",
+			"color_white_brown"
+		]
+	},
+
+	"note_chamomile": {
+		"notif": [
+			"color_red_",
+			"color_red_purple",
+			"color_red_ruby",
+			"color_red_garnet",
+			"color_red_tawny",
+			"color_red_brown"
+		]
+	},
+	"note_elderflower": {
+		"notif": [
+			"color_red_",
+			"color_red_purple",
+			"color_red_ruby",
+			"color_red_garnet",
+			"color_red_tawny",
+			"color_red_brown"
+		]
+	},
+
+	"note_lemon": {
+		"notif": [
+			"color_red_",
+			"color_red_purple",
+			"color_red_ruby",
+			"color_red_garnet",
+			"color_red_tawny",
+			"color_red_brown"
+		]
+	},
+
+	"note_lime": {
+		"notif": [
+			"color_red_",
+			"color_red_purple",
+			"color_red_ruby",
+			"color_red_garnet",
+			"color_red_tawny",
+			"color_red_brown"
+		]
+	},
+
+	"stone_fruit_": {
+		"notif": [
+			"color_red_",
+			"color_red_purple",
+			"color_red_ruby",
+			"color_red_garnet",
+			"color_red_tawny",
+			"color_red_brown"
+		]
+	},
+
+	"tropical_": {
+		"notif": [
+			"color_red_",
+			"color_red_purple",
+			"color_red_ruby",
+			"color_red_garnet",
+			"color_red_tawny",
+			"color_red_brown"
+		]
+	},
+
+	"tannin_": {
+		"notif": ["winetype_sparkling"]
+	},
+	"mousse_": {
+		"onlyif": ["winetype_sparkling"]
+	},
+	"nuance_tint_": {
+		"onlyif": ["color_"]
+	},
+	"clarity_": {
+		"onlyif": ["nuance_tint_"]
+	},
+	"appearanceintensity_": {
+		"onlyif": ["clarity_"]
+	}
+}

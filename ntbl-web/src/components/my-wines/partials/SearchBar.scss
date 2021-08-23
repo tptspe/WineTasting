@@ -1,0 +1,92 @@
+@import 'src/assets/scss/partials/_vars';
+@import 'src/assets/scss/partials/_mixins';
+
+.search-bar {
+	background: #fff;
+	padding: 15px 20px;
+	border-bottom: 1px solid $c_border;
+	margin-bottom: 15px;
+
+	.input-group {
+		height: 45px;
+		line-height: 45px;
+		width: 250px;
+		max-width: 100%;
+		margin: 0 !important;
+	}
+
+	.new-search {
+		color: $cp_primary;
+		font-weight: 400;
+	}
+
+	.sort-wines-control {
+		.row {
+			margin: 0;
+		}
+
+		label {
+			padding: 0;
+			text-align: right;
+		}
+
+		select {
+			width: 100%;
+		}
+
+		&.sort-btns {
+			width: 440px;
+			float: right;
+
+			label {
+				text-align: center;
+				line-height: 45px;
+				max-width: 72px;
+			}
+
+			.info-field-wrapper {
+				padding: 0;
+			}
+
+			.wine-sort-btns {
+				.btn {
+					background-color: transparent !important;
+					color: $cp_primary !important;
+					border: 1px solid $cp_primary;
+					padding: 0.35rem 1.1rem;
+					@include border_radius(5px);
+					float: left;
+
+					&.active {
+						background-color: $cp_primary !important;
+						color: $cp_white !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+#search-input {
+	padding-top: 7px;
+	width: 250px;
+	display: inline-block;
+	flex: none;
+	@include border_radius(5px);
+}
+
+#search-btn {
+	margin: 0;
+	background-color: transparent;
+	color: #ff645a;
+	border: 1px solid #ff645a;
+	padding: 0.59rem 1.65rem;
+	position: relative;
+	top: -1px;
+	@include border_radius(5px);
+
+	&:hover {
+		background: #ff645a;
+		color: #fff;
+	}
+}

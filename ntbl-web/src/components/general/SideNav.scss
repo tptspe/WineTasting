@@ -1,0 +1,64 @@
+@import 'src/assets/scss/partials/_vars';
+@import 'src/assets/scss/partials/_mixins';
+
+/* SideNav */
+.side-nav {
+	height: 100%;
+	width: 250px;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #101010;
+	overflow-x: hidden;
+	padding-top: 60px;
+	@include transition(left, 0.55s, ease);
+
+	z-index: 20;
+
+	&.nav-open {
+		left: 0;
+	}
+
+	&.nav-close {
+		left: -250px;
+	}
+
+	/* The navigation menu links */
+	a {
+		padding: 8px 8px 8px 32px;
+		text-decoration: none;
+		font-size: 25px;
+		color: $cp_primary;
+		display: block;
+		transition: 0.3s;
+
+		&:hover {
+			color: $cp_grey_dark;
+		}
+	}
+
+	.closebtn {
+		position: absolute;
+		top: 0;
+		right: 25px;
+		font-size: 36px;
+		margin-left: 50px;
+	}
+}
+
+.side-nav-bg-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+	@include transition(z-index, 0.85s, ease);
+	@include transition(background-color, 0.85s, ease);
+
+	&.visible {
+		z-index: 15 !important;
+		background-color: rgba(70, 90, 130, 0.25) !important;
+	}
+}

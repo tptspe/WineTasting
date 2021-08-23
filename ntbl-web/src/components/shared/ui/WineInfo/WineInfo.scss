@@ -1,0 +1,48 @@
+@import 'src/assets/scss/partials/_mixins';
+@import '../theme';
+
+.WineInfo__Container {
+	background-color: inherit;
+	margin: 0 auto;
+	padding: 10px;
+	max-width: 260px;
+	text-align: center;
+	color: $black_jet;
+	@include border_radius(inherit);
+
+	img.WineInfo__Picture {
+		margin-bottom: 25px;
+	}
+
+	h1.WineInfo__NameHeader,
+	time.WineInfo__Vintage {
+		margin-bottom: 0;
+		font-family: $headings_font_family;
+		font-size: 18px;
+		font-weight: normal;
+
+		@include desktop {
+			font-size: 24px;
+		}
+	}
+
+	h2.WineInfo__ProducerName {
+		font-family: $body_font_family;
+		font-size: 14px;
+		font-weight: 600;
+
+		@include desktop {
+			font-size: 13px;
+		}
+	}
+
+	h3.WineInfo__Location {
+		font-family: $body_font_family;
+		font-size: 14px;
+		font-weight: normal;
+
+		@include desktop {
+			font-size: 13px;
+		}
+	}
+}

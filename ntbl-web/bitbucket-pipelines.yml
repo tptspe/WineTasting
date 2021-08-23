@@ -1,0 +1,92 @@
+image: atlassian/default-image:2
+
+clone:
+  depth: 1       # include the last commit only
+options: 
+  max-time: 10
+
+definitions: 
+  caches:
+    yarncash-circleci: /home/circleci/.cache/yarn/v4/
+    #yarncash: /usr/local/share/.cache/yarn/
+    npm: $HOME/.npm
+    cypress: $HOME/.cache/Cypress  
+  steps:
+    - step: &futureCode
+        name: Test potential future code
+        image: "circleci/node:8-browsers"
+        script:
+          - yarn cache dir
+          - '[ -z "$BITBUCKET_PR_DESTINATION_BRANCH" ] || (git fetch && git checkout $BITBUCKET_PR_DESTINATION_BRANCH && git merge $BITBUCKET_BRANCH && yarn install && yarn test-ci)'
+        artifacts: 
+          - test-output/**
+
+    - step: &buildAndTest
+        name: Build and test code
+        image: "circleci/node:8-browsers"
+        image: cypress/base:10
+        environment:
+          TERM: xterm
+          DISPLAY: 1.5
+        caches:
+          - yarncash-circleci
+        script:
+          - yarn install
+          - yarn test-ci
+        save_cache:
+          key: v1-deps-{{ .Branch }}-{{ checksum "package.json" }}
+          # cache NPM modules and the folder with the Cypress binary
+          paths:
+            - ~/.npm
+            - ~/.cache  
+        artifacts: 
+          - test-output/**
+          - build/**
+
+pipelines:
+  pull-requests:
+    Qfeature/*:
+      - step:
+          name: Test potential future code
+          caches:
+              - yarncash-circleci
+          script:
+            - echo Testing the potential future code created if merging pull request \#$BITBUCKET_PR_ID from $BITBUCKET_BRANCH into $BITBUCKET_PR_DESTINATION_BRANCH
+            - git fetch && git checkout $BITBUCKET_PR_DESTINATION_BRANCH && git merge $BITBUCKET_BRANCH
+            - yarn install
+            #- yarn add cypress
+            - yarn test-ci
+          artifacts: 
+            - ./test-output/*
+
+
+  branches:
+      develop:
+        - parallel:
+           - step: *buildAndTest
+           #- step: *futureCode
+        - step:
+            name: Deploy to demo.winenode.com
+            deployment: staging  
+            script:
+              - apt-get update && apt-get install -y sshpass 
+              - (echo "develop" && git --no-pager log -n 40 --pretty=format:'%cr [%h] %s' --abbrev-commit) > ./build/build.version
+              - sshpass -p $WINENODE_KEY ssh -t winenode.com@winenode.com "rm -fr ./demo ; exit"
+              - sshpass -p $WINENODE_KEY scp -r ./build/ winenode.com@winenode.com:/var/www/winenode.com/demo/
+            artifacts: 
+              - ./test-output/*
+
+      feature/*:
+        - parallel:
+           - step: *buildAndTest
+           #- step: *futureCode
+        - step:
+            name: Deploy to testdemo.winenode.com
+            deployment: test  
+            script:
+              - apt-get update && apt-get install -y sshpass 
+              - (echo $BITBUCKET_BRANCH && git --no-pager log -n 40 --pretty=format:'%cr [%h] %s' --abbrev-commit) > ./build/build.version
+              - sshpass -p $WINENODE_KEY ssh -t winenode.com@winenode.com "rm -fr ./testdemo ; exit"
+              - sshpass -p $WINENODE_KEY scp -r ./build/ winenode.com@winenode.com:/var/www/winenode.com/testdemo/
+
+

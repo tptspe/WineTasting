@@ -1,0 +1,47 @@
+{
+	"options": ["date_sort_", "country_sort_", "rating_sort_", "price_sort_"],
+	"date_sort_": {
+		"value": "date",
+		"label": "ui_date",
+		"groups": {
+			"date_sort_a": {
+				"today": 0
+			},
+			"date_sort_b": {
+				"yesterday": 1
+			},
+			"date_sort_c": {
+				"aweekago": 7
+			},
+			"date_sort_d": {
+				"amonthago": 30
+			}
+		}
+	},
+	"country_sort_": {
+		"value": "country",
+		"label": "ui_country"
+	},
+	"rating_sort_": {
+		"value": "rating",
+		"label": "ui_rating",
+		"groups": {
+			"rating_sort_a": {
+				"above": 95
+			},
+			"rating_sort_b": {
+				"between": [91, 95]
+			},
+			"rating_sort_c": {
+				"between": [85, 90]
+			},
+			"rating_sort_d": {
+				"below": 85
+			}
+		}
+	},
+	"price_sort_": {
+		"value": "price",
+		"label": "ui_price"
+	}
+}

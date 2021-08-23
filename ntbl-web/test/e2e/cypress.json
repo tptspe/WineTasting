@@ -1,0 +1,17 @@
+{
+	"env": {
+		"RETRY_FAILED_TESTS": true,
+		"DEFAULT_API_URL": "http://core.winenode.com",
+		"USER_LOGIN_EMAIL": "#login_email",
+		"USER_LOGIN_PW": "#login_password",
+		"USER_LOGIN_BUTTON": "#login_button",
+		"USER_EMAIL": "user2@gmail.com",
+		"USER_PW": "11111",
+		"WINE_TEST_NAME": "MyTestWine"
+	},
+	"baseUrl": "http://localhost:3000",
+	"defaultCommandTimeout": 15000,
+	"requestTimeout": 20000,
+	"pageLoadTimeout": 30000,
+	"chromeWebSecurity": false
+}

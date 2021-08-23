@@ -1,0 +1,84 @@
+@import 'src/assets/scss/partials/_vars';
+@import 'src/assets/scss/partials/_mixins';
+
+.wines-controls-wrapper {
+	border-bottom: 1px solid $c_border;
+	padding: 15px 10px;
+	margin-bottom: 35px;
+
+	.sort-wines-control {
+		width: 270px;
+		float: left;
+
+		.row {
+			margin: 0;
+		}
+
+		label {
+			padding: 0;
+			text-align: right;
+		}
+
+		select {
+			width: 100%;
+		}
+
+		&.sort-btns {
+			width: 85%;
+
+			label {
+				text-align: center;
+				line-height: 45px;
+			}
+
+			.wine-sort-btns {
+				.btn {
+					background-color: transparent !important;
+					color: $cp_primary !important;
+					border: 1px solid $cp_primary;
+					padding: 0.35rem 1.1rem;
+					@include border_radius(5px);
+					float: left;
+
+					&.active {
+						background-color: $cp_primary !important;
+						color: $cp_white !important;
+					}
+				}
+			}
+		}
+	}
+
+	.filter-toggle {
+		width: 15%;
+		float: right;
+		text-align: right;
+		height: 55px;
+		padding-top: 15px;
+
+		.toggler {
+			display: inline-block;
+			border: 1px solid $c_border;
+			border-radius: 5px;
+			background-color: #cccccc;
+			background-image: url(./sprite_filter_toggle.png);
+			background-position: 1px 1px;
+			background-repeat: no-repeat;
+			background-origin: border-box;
+			background-size: 32px auto;
+			vertical-align: middle;
+			width: 34px;
+			height: 34px;
+			cursor: pointer;
+
+			&:hover {
+				cursor: pointer;
+			}
+
+			&.open {
+				background-color: $cp_primary;
+				background-position: 1px -31px;
+			}
+		}
+	}
+}

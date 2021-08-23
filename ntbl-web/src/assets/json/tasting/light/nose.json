@@ -1,0 +1,11 @@
+[
+	{
+		"isMultiple": false,
+		"keys": ["noseintensity_"],
+		"required": ["noseintensity_"]
+	},
+	{
+		"isMultiple": true,
+		"keys": ["notes_"]
+	}
+]
